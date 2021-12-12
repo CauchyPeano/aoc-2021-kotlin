@@ -37,7 +37,7 @@ fun problem2(ints: List<Int>) {
     val av = ints.average().roundToInt()
     var res = Integer.MAX_VALUE
     var d = 0
-    for (i in 0..1840) {
+    for (i in 0..1840) { //still fast enough lol
         val sum = ints.map { Math.abs(it - i) }.map { (it * (it + 1)) / 2 }.sum()
         if (sum < res) {
             res = sum
